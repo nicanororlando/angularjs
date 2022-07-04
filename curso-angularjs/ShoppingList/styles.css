@@ -1,0 +1,33 @@
+div {
+  position: relative;
+  width: 300px;
+  background-color: rgba(237, 237, 237, 0.752);
+  margin: auto;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+ul {
+  padding: 0 10px;
+}
+
+li {
+  margin: 2px 0;
+  padding: 5px;
+  background: #fff;
+  list-style: none;
+}
+
+span {
+  position: absolute;
+  right: 25px;
+}
+span:hover {
+  cursor: pointer;
+}
+
+.form {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}

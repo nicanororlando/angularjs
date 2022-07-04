@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTTP</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="//code.angularjs.org/1.8.2/angular.min.js"></script>
+  </head>
+  <body ng-app="http">
+    <div ng-controller="myCtrl1">
+      <p>Response http n°1: <span>{{myWelcome}}</span></p>
+    </div>
+    <div ng-controller="myCtrl2">
+      <p>Response http n°2:</p>
+      <li>Response http n°2: <span>{{content}}</span></li>
+      <li>Response http n°2: <span>{{statuscode}}</span></li>
+      <li>Response http n°2: <span>{{statustext}}</span></li>
+    </div>
+    <br />
+    <div ng-controller="customersCtrl">
+      <p>Response http n°3 :</p>
+      <table>
+        <tr ng-repeat="x in names">
+          <td>{{ x.Name }}</td>
+          <td>{{ x.Country }}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div ng-controller="customersCtrl">
+      <h1>Nombres:</h1>
+      <div ng-show="names.length == 0">Cargando paises...</div>
+      <h2 ng-show="names.length">Se encontraron {{names.length}} nombres</h2>
+      <ol>
+        <li ng-repeat="x in names">{{x.Name}} - {{x.Country}}</li>
+      </ol>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>

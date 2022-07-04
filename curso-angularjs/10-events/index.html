@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xxx</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="//code.angularjs.org/1.8.2/angular.min.js"></script>
+  </head>
+  <body ng-app="events">
+    <div ng-controller="myCtrl1">
+      <button ng-click="adition()">Sumar</button>
+      <p>{{ count }}</p>
+    </div>
+    <div ng-controller="myCtrl2">
+      <button ng-click="change()">Click Me!</button>
+      <div ng-show="show">
+        <h1>Menu:</h1>
+        <div>Pizza</div>
+        <div>Pasta</div>
+        <div>Pesce</div>
+      </div>
+    </div>
+    <div ng-controller="myCtrl3">
+      <h1 ng-mousemove="coordinates($event)">Mouse Over Me!</h1>
+      <p>Coordinates: {{x + ', ' + y}}</p>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>

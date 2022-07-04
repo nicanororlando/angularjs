@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Routing</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="//code.angularjs.org/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+  </head>
+  <body ng-app="routing">
+    <p><a href="#/!">Main</a></p>
+
+    <a href="#!london">London</a>
+    <a href="#!paris">Paris</a>
+
+    <p>
+      Note that each "view" has its own controller which each gives the "msg"
+      variable a value.
+    </p>
+
+    <div ng-view></div>
+
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>

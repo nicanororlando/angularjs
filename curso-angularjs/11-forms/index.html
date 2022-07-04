@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xxx</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="//code.angularjs.org/1.8.2/angular.min.js"></script>
+  </head>
+  <body ng-app="forms">
+    <form>
+      Pick a topic:
+      <input type="radio" ng-model="myVar" value="dogs" />Dogs
+      <input type="radio" ng-model="myVar" value="tuts" />Tutorials
+      <input type="radio" ng-model="myVar" value="cars" />Cars
+    </form>
+
+    <div ng-switch="myVar">
+      <div ng-switch-when="dogs">
+        <h1>Dogs</h1>
+        <p>Welcome to a world of dogs.</p>
+      </div>
+      <div ng-switch-when="tuts">
+        <h1>Tutorials</h1>
+        <p>Learn from examples.</p>
+      </div>
+      <div ng-switch-when="cars">
+        <h1>Cars</h1>
+        <p>Read about cars.</p>
+      </div>
+    </div>
+
+    <div ng-controller="formCtrl">
+      <!-- El 'novalidate' desactiva las validaciones por defecto del navegador. -->
+      <form novalidate>
+        First Name:<br />
+        <input type="text" ng-model="user.firstName" /><br />
+        Last Name:<br />
+        <input type="text" ng-model="user.lastName" />
+        <br /><br />
+        <button ng-click="reset()">RESET</button>
+      </form>
+      <p>form = {{user}}</p>
+      <p>master = {{master}}</p>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>

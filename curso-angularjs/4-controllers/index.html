@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controladores</title>
+
+    <script src="//code.angularjs.org/1.8.2/angular.min.js"></script>
+  </head>
+  <body ng-app="controllers">
+    <div ng-controller="myCtrl">
+      <h1 ng-click="changeName()">{{firstname}}</h1>
+    </div>
+    <div ng-controller="myCtr2">
+      First Name: <input type="text" ng-model="firstName" /><br />
+      Last Name: <input type="text" ng-model="lastName" /><br />
+      <br />
+      Full Name: {{fullName()}}
+    </div>
+    Full Name (global): {{fullName()}}
+
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>

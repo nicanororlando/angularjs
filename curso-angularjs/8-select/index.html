@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xxx</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="//code.angularjs.org/1.8.2/angular.min.js"></script>
+  </head>
+  <body ng-app="select">
+    <div ng-controller="myCtrl">
+      <select ng-model="selectedName" ng-options="x for x in names"></select>
+      <select>
+        <option ng-repeat="x in names">{{x}}</option>
+      </select>
+    </div>
+    <div ng-controller="myCtrl2">
+      <p>Select a car:</p>
+
+      <select ng-model="selectedCar">
+        <option ng-repeat="car in cars" value="{{car.color}}">
+          {{car.model}}
+        </option>
+      </select>
+      <h3>You selected {{selectedCar}}</h3>
+
+      <br />
+
+      <p>Select a car:</p>
+      <select ng-model="selectedCar">
+        <!-- Con 'ng-value' le pasamos el objeto car al modelo. -->
+        <option ng-repeat="car in cars" ng-value="{{car}}">
+          {{car.model}}
+        </option>
+      </select>
+      <h3>You selected the {{selectedCar.model}} {{selectedCar.color}}</h3>
+    </div>
+    <div ng-controller="myCtrl3">
+      <p>Select a car:</p>
+
+      <select ng-model="selectedCar">
+        <!-- Si queremos obtener el objeto, utilizamos 'ng-value', de esta manera
+        le pasamos el objeto a nuestro modelo 'selectedCar'. -->
+        <option ng-repeat="car in cars" ng-value="{{car}}">
+          {{car.brand}}
+        </option>
+      </select>
+
+      <h1>You selected: {{selectedCar.brand}}</h1>
+      <h2>Model: {{selectedCar.model}}</h2>
+      <h3>Color: {{selectedCar.color}}</h3>
+
+      <p>Note that the selected value represents an object.</p>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>

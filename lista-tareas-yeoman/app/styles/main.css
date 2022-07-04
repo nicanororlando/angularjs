@@ -1,0 +1,8 @@
+body {
+  padding: 0;
+}
+
+.lista {
+  padding: 5px 10px;
+  cursor: move;
+}
