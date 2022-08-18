@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+
+    <link rel="stylesheet" href="app.animations.css" />
+
+    <link
+      rel="stylesheet"
+      href="lib/html5-boilerplate/dist/css/normalize.css"
+    />
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css" />
+    <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script src="//code.angularjs.org/1.8.2/angular.min.js"></script>
+  </head>
+  <body ng-app="app">
+    <div class="view-container">
+      <div ng-view class="view-frame"></div>
+    </div>
+
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="app.animations.js"></script>
+    <script src="components/MyHeader/my-header.module.js"></script>
+    <script src="components/MyHeader/my-header.component.js"></script>
+    <script src="components/PhoneList/phone-list.module.js"></script>
+    <script src="components/PhoneList/phone-list.component.js"></script>
+    <script src="components/PhoneDetail/phone-detail.module.js"></script>
+    <script src="components/PhoneDetail/phone-detail.component.js"></script>
+    <script src="core/phone/phone.module.js"></script>
+    <script src="core/phone/phone.service.js"></script>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.js"></script>
+    <script src="../node_modules/angular-resource/angular-resource.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<header>
+  <h1>{{$ctrl.title}}</h1>
+  <section>
+    <form ng-submit="$ctrl.addDestination()">
+      City:
+      <input type="text" name="city" ng-model="$ctrl.newDestination.city" />
+      Country:
+      <input
+        type="text"
+        name="country"
+        ng-model="$ctrl.newDestination.country"
+      />
+      <input type="submit" value="Add" />
+    </form>
+  </section>
+  <section>
+    <h2>Your trip</h2>
+    <div ng-repeat="destination in $ctrl.destinations">
+      <span>{{destination.city}}, {{destination.country}}</span>
+    </div>
+  </section>
+</header>
