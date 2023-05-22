@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo en Scope</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="//code.angularjs.org/1.8.2/angular.min.js"></script>
+  </head>
+  <body>
+    <!-- Validate User Input -->
+    <form ng-app name="myForm">
+      Name:
+      <input name="myName" ng-model="myText" required />
+      Email:
+      <input type="email" name="myAddress" ng-model="text" />
+
+      <!-- Si show retorna true se muestra el error -->
+      <span ng-show="myForm.myAddress.$error.email"
+        >Not a valid e-mail address</span
+      >
+      <h2>Status</h2>
+      <p>valido: {{myForm.myAddress.$valid}}</p>
+      <p>sucio: {{myForm.myAddress.$dirty}}</p>
+      <p>modificado: {{myForm.myAddress.$touched}}</p>
+    </form>
+
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>

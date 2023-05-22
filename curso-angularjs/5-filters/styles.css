@@ -1,0 +1,31 @@
+body {
+  font-family: sans-serif;
+}
+li {
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+li span {
+  font-weight: bold;
+  display: block;
+  font-size: 1.2em;
+}
+aside {
+  width: 200px;
+  float: right;
+  padding: 20px;
+  display: table-cell;
+}
+aside h2 {
+  margin-bottom: 3px;
+}
+section {
+  display: table-cell;
+}
+li.even {
+  background-color: #d5d5d5;
+}
+li.odd {
+  background-color: #d5d5ff;
+}
