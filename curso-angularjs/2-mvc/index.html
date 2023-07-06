@@ -11,6 +11,7 @@
   <body ng-app="mvc" ng-controller="AlumnoController">
     <h1>Cuaderno alumnos</h1>
     <div>
+      <!-- DIRECTIVE: ng-repeat -->
       <!-- for alumno in alumnos:  -->
       <div ng-repeat="alumno in alumnos | orderBy:'nombre'">
         <div>{{alumno.nombre}} - {{alumno.telefono}}</div>

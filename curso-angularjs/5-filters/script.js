@@ -3,21 +3,25 @@ const alumnos = [
     nombre: "Canor orli",
     amount: "12312312",
     curso: "3° es",
+    date: "14-01-2000",
   },
   {
     nombre: "Abigail mendoza",
     amount: "151563246",
     curso: "5° en",
+    date: "24-03-2023",
   },
   {
     nombre: "Marcelo nose",
     amount: "23452345",
     curso: "programmer",
+    date: "16-01-2020",
   },
   {
     nombre: "Zacarias merluzo",
     amount: "62342342",
     curso: "qcy",
+    date: "12-11-2300",
   },
 ];
 

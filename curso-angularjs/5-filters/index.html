@@ -13,9 +13,15 @@
     <div ng-controller="AlumnosCtrl">
       <p>{{ title | uppercase }}</p>
       <p><input type="text" ng-model="test" /></p>
-      <div ng-repeat="alumno in alumnos | orderBy:'nombre' | filter : test">
-        <div>{{alumno.nombre}} - {{alumno.amount | currency}}</div>
-        <span>{{alumno.curso}}</span>
+      <div
+        ng-repeat="alumno in alumnos | orderBy:'nombre' | filter : test | limitTo:'2'"
+      >
+        <!-- Angularjs Filter: currency -->
+        <div>
+          {{alumno.nombre}} - {{alumno.amount | currency}} -
+          <span>{{alumno.curso | uppercase}}</span> -
+          <span>{{alumno.date | date:'YYYY-MM-DD'}}</span>
+        </div>
       </div>
     </div>
     <br />

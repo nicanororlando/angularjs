@@ -1,6 +1,9 @@
 body {
   font-family: sans-serif;
 }
+th {
+  cursor: pointer;
+}
 li {
   font-size: 0.8em;
   margin-bottom: 10px;
